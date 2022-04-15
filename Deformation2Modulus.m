@@ -26,12 +26,12 @@ Y = roots([B2 B1 B0]);
 E = (6*w)/(Y*h*R)
 
 % Plotting relevant a/R curve
-Y1 = [0:0.00001:0.0001];
+Y1 = [0:0.000001:0.0004];
 X1 = 0.05668*a + 0.1522+(19653 + 8143*a + 845*a.*a)*Y1 ...
     - (8500165149+ 3261047248*a - 310079383*a.*a)*Y1.*Y1;
 
 plot(Y1,X1,'DisplayName', strcat('a/R = ', num2str(a))); hold on;
-axis([0 0.000005 0 1]);
+axis([0 0.00004 0 5]);
 ylabel('δ/R'); xlabel('6w/EhR');
 title('X (δ/R) and Y (6w/EhR)');
 legend('show')
